@@ -4,6 +4,36 @@
 HomeAssistant sensor for SolisCloud portal. 
 Still questions after the readme? Read the [wiki](https://github.com/hultenvp/solis-sensor/wiki) or look at the [discussions page](https://github.com/hultenvp/solis-sensor/discussions)
 
+## Developing and testing locally
+
+For local development it can be useful to run the Python code and tests outside of Home Assistant.
+
+### Local install
+
+1. Clone this repository and change into its root directory.
+2. Create and activate a virtual environment (recommended):
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+```
+
+3. Install the minimal dependencies needed to exercise the integration and run tests:
+
+```bash
+pip install aiofiles aiohttp requests homeassistant pytest
+```
+
+### Running tests
+
+From the repository root, run the full test suite with:
+
+```bash
+pytest -v
+```
+
+
+
 ## SolisCloud
 >❗The SolisCloud API is known to be unstable and can fail to respond resulting in "no inverter found" issues. See [troubleshooting](#warning--known-limitations) section. Join the discussion [here](https://github.com/hultenvp/solis-sensor/discussions/71) to find out about known limitations and to ask questions.
 
